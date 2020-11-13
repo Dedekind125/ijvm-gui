@@ -1,5 +1,6 @@
 # IJVM GUI
-This is a GUI implementation of an emulator capable of executing [IJVM](https://en.wikipedia.org/wiki/IJVM) byte-code C.
+
+A cross-platform GUI application of an emulator capable of executing [IJVM](https://en.wikipedia.org/wiki/IJVM) byte-code in C.
 
 The application was build with GTK+ 3 and the use of the [Glade builder](https://glade.gnome.org/).
 For compiling and running the code under different operation systems brief instructions are given.
