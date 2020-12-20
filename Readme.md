@@ -2,7 +2,7 @@
 
 A cross-platform GUI application of an emulator capable of executing [IJVM](https://en.wikipedia.org/wiki/IJVM) byte-code in C.
 
-The application was build with GTK+ 3 and the use of the [Glade builder](https://glade.gnome.org/).
+The application was build with GTK+ 3 and [Glade builder](https://glade.gnome.org/).
 For compiling and running the code under different operation systems brief instructions are given.
 
 ### Linux
@@ -22,16 +22,15 @@ To compile and run the GUI on macOS you must install GTK+ 3 via [Homebrew](http:
 Then, compile the code with `make ijvm-gui` and run it with `./ijvm-gui`
 
 ### Windows
-Compiling the GUI code under Windows can become quite **painful**.  
-To avoid making you do the following, see the Installation Package section instead.
-
-#### Compiling
-I would recommend install and use the [MSYS2](https://www.msys2.org/) project as the [official documentation suggests](https://www.gtk.org/docs/installations/windows/#using-gtk-from-msys2-packages). 
-
-*Note: Unfortunately MSYS2 does not support the [BSD sys/socket.h](https://pubs.opengroup.org/onlinepubs/009695399/basedefs/sys/socket.h.html) so the networking bonus does not work on the windows version of the GUI application (so make sure to remove the coresponding code of the networking bonus before compiling!).*
-
-Finally, to compile the code run `make ijvm-gui` and then run it with `./ijvm-gui.exe`
 
 #### Installation Package
-To download the installer(`ijvm-setup.exe`) visit the [Releases page](https://github.com/Dedekind125/IJVM/releases/tag/v1.0).   
+Instead of building the application on Windows you can directly download a proper installation package(`ijvm-setup.exe`) via the [Releases page](https://github.com/Dedekind125/IJVM/releases/tag/v1.0).   
 After the installation, you will be able to run the application as native Windows program.
+
+#### Compiling
+Compiling GTK3+ application under Windows is quite painful.
+I would recommend install and use the [MSYS2](https://www.msys2.org/) project as the [official documentation suggests](https://www.gtk.org/docs/installations/windows/#using-gtk-from-msys2-packages). 
+
+*Note: Unfortunately MSYS2 does not support the [BSD sys/socket.h](https://pubs.opengroup.org/onlinepubs/009695399/basedefs/sys/socket.h.html) so the networking does not work on the Windows.*
+
+Finally, to compile the code run `make ijvm-gui` and then run it with `./ijvm-gui.exe`
